@@ -1,0 +1,208 @@
+clear
+echo ""
+echo "                 ##########################################"
+echo "                 ##                                      ##"
+echo "                 ##        SuperRecovery Flasher         ##"
+echo "                 ##              OliverG96               ##"
+echo "                 ##                Marvel                ##"
+echo "                 ##                                      ##"
+echo "                 ##########################################"
+echo ""
+echo "1 - ClocworkMod 5.0.2.8"
+echo "2 - ClocworkMod 6.0.0.3"
+echo "3 - ClocworkMod 6.0.0.7"
+echo "4 - ClocworkMod 6.0.1.2(Touch)"
+echo "5 - TWRP 2.2.1"
+echo "6 - TWRP 2.2.1.4"
+echo "7 - TWRP 2.2.1.5"
+echo "8 - TWRP 2.2.2.0"
+echo ""
+echo "0 - Return to main menu"
+echo ""
+echo -n "Select the recovery that you want flash: "
+read versiorm
+if [ "$versiorm" != "1" ] && [ "$versiorm" != "2" ] && [ "$versiorm" != "3" ] && [ "$versiorm" != "4" ] && [ "$versiorm" != "5" ] && [ "$versiorm" != "6" ] && [ "$versiorm" != "7" ] && [ "$versiorm" != "8" ] && [ "$versiorm" != "0" ]
+  then
+    ./tools/marvelen
+  fi
+
+if [ "$versiorm" = "1" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/cwm5028.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "2" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/cwm6003.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "3" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/cwm6007.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "4" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/cwm6012.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "5" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp221.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "6" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp2214.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "7" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp2215.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "8" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp2220.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "0" ]
+  then
+    ./runme
+  fi

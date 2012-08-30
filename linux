@@ -1,0 +1,33 @@
+clear
+echo ""
+echo "                 ##########################################"
+echo "                 ##                                      ##"
+echo "                 ##        SuperRecovery Flasher         ##"
+echo "                 ##       OliverG96 y/and rezo609        ##"
+echo "                 ##             Inicio/Home              ##"
+echo "                 ##                                      ##"
+echo "                 ##########################################"
+echo ""
+echo "1 - Español"
+echo "2 - English"
+echo ""
+echo "0 - Cerrar/Close"
+echo ""
+echo -n "Elige tu idioma/Select your language: "
+read lang
+if [ "$lang" != "1" ] && [ "$lang" != "2" ] && [ "$lang" != "0" ]
+  then
+    ./linux
+  fi
+if [ "$lang" = "1" ]
+  then
+    tools/marveles
+  fi
+if [ "$lang" = "2" ]
+  then
+    tools/marvelen
+  fi
+if [ "$lang" = "0" ]
+  then
+    end
+  fi
