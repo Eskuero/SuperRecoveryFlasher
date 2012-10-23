@@ -1,42 +1,31 @@
-@title SuperRecovery Flasher by WFSdev Copyright (c) 2012
+:main
 echo off 
 cls
 echo.
 echo                   ##########################################"
 echo                   ##                                      ##"
 echo                   ##        SuperRecovery Flasher         ##"
-echo                   ##       OliverG96 y/and rezo609        ##"
+echo                   ##              OliverG96               ##"
 echo                   ##             Inicio/Home              ##"
 echo                   ##                                      ##"
 echo                   ##########################################"
 echo.
-:menuLOOP
-	::Load up our menu selections
-	for /f "tokens=1,2,* delims=_ " %%A in ('"findstr /b /c:":menu_" "%~f0""') do echo.  %%B  %%C
-	
+echo 1 - Castellano
+echo 2 - English
+echo. 
+echo 0 - Cerrar/Close
+echo.
+set /p lang=Elige tu idioma/Select your language: 
+if /i "%lang%" EQU "1" (goto es)
+if /i "%lang%" EQU "2" (goto en)
+if /i "%lang%" EQU "0" (goto sal) else goto main
+:es
+  call ./tools/marveles.bat
+  pause
+:en
+  call ./tools/marvelen.bat
+  pause
+:sal
+  exit
 
-	set choice=
-	echo.&set /p choice=Please choose a language/Elige tu idioma: ||GOTO:EOF
-	echo.&call:menu_%choice%
-GOTO:menuLOOP
-
-:menu_1    English
-	echo. Now Starting...
-	start srt98.bat
-	exit
-	exit
-	pause
-	cls
-
-GOTO:EOF
-
-:menu_2    Espanol
-	echo. Iniciando...
-	start srt97.bat
-	exit
-	exit
-	pause
-	cls
-
-GOTO:EOF
 	
