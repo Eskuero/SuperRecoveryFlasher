@@ -17,12 +17,13 @@ echo "6 - TWRP 2.2.1.4"
 echo "7 - TWRP 2.2.1.5"
 echo "8 - TWRP 2.2.2.0"
 echo "9 - TWRP 2.3.1.0"
+echo "10 - TWRP 2.3.3.0"
 echo ""
 echo "0 - Return to main menu"
 echo ""
 echo -n "Select the recovery that you want flash: "
 read versiorm
-if [ "$versiorm" != "1" ] && [ "$versiorm" != "2" ] && [ "$versiorm" != "3" ] && [ "$versiorm" != "4" ] && [ "$versiorm" != "5" ] && [ "$versiorm" != "6" ] && [ "$versiorm" != "7" ] && [ "$versiorm" != "8" ] && [ "$versiorm" != "9" ] && [ "$versiorm" != "0" ]
+if [ "$versiorm" != "1" ] && [ "$versiorm" != "2" ] && [ "$versiorm" != "3" ] && [ "$versiorm" != "4" ] && [ "$versiorm" != "5" ] && [ "$versiorm" != "6" ] && [ "$versiorm" != "7" ] && [ "$versiorm" != "8" ] && [ "$versiorm" != "9" ] && [ "$versiorm" != "10" ] && [ "$versiorm" != "0" ]
   then
     ./tools/marvelen
   fi
@@ -218,6 +219,28 @@ if [ "$versiorm" = "9" ]
     echo "Flashing recovery..."
     echo ""
     sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp2310.img
+    echo ""
+    echo "Booting recovery..."
+    sudo ./tools/fastboot reboot
+    sudo ./tools/adb wait-for-device
+    ./tools/adb reboot recovery
+    ./tools/marvelen
+  fi
+if [ "$versiorm" = "10" ]
+  then
+    clear
+    echo ""
+    echo -n "Connect the phone over an USB, and press any key to continue: "
+    read continuar
+    echo ""
+    echo "We need Superuser access, it's possible that you must to write your Ubuntu password..."
+    echo ""
+    sudo ./tools/adb reboot bootloader
+    sleep 10s
+    echo ""
+    echo "Flashing recovery..."
+    echo ""
+    sudo ./tools/fastboot flash recovery ./tools/recoveries/twrp2330.img
     echo ""
     echo "Booting recovery..."
     sudo ./tools/fastboot reboot
