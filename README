@@ -1,10 +1,10 @@
 SuperRecoveryFlasher
 ====================
 
-This a tool to automatize your recovery flashing on your HTC Wildfire S a510e (GSM).
+This a tool to automatize your recovery flashing on very different phones. Actually I just want to support the phones I own, so there's only marvel version (HTC Wildfire GSM), but I wait that in the future this tools start to support new devices.
 
 If you want to download this and receive only the new features instead of downloading all versions again, you must to download and install git before:
 http://git-scm.com/downloads
 
-Now to setup it and download the code you must to write this command:
-git clone https://github.com/OliverG96/SuperRecoveryFlasher.git -b marvel
+Now to setup it and download the code you must to write this commands that depends of what device you own:
+- HTC Wildfire S a510e (GSM) --> git clone https://github.com/OliverG96/SuperRecoveryFlasher.git -b marvel
